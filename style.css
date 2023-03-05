@@ -1,189 +1,268 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;1,9..144,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;1,9..144,100&display=swap");
 
-body::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #253d4a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: all;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.maisinfos-collapsible-container {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+  width: 50%;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .collapsible:hover {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 100%;
 }
 
-
 .header-container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
 }
 
 .header-title {
-    text-align: center;
-    flex: 1
+  text-align: center;
+  flex: 1;
 }
 
 h1 {
-    color: #fff !important;
-    font-size: 60px !important;
-    font-family: 'Fraunces', serif;
-    font-weight: bold;
+  color: #fff !important;
+  font-size: 60px !important;
+  font-family: "Fraunces", serif;
+  font-weight: bold;
 }
 
 .header-images {
-    max-width: 850px;
-    flex: 1;
-    background-color: #157347;
-    height: 105%;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    width: 200%;
+  max-width: 850px;
+  flex: 1;
+  background-color: #157347;
+  height: 105%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  width: 200%;
 }
 
 .desc-curso {
-    margin: 30px 0px 20px 100px;
-    text-align: center;
-    color: #fff;
-    font-family: "Poppins", Sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    width: 800px;
+  margin: 30px 0px 20px 100px;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", Sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  width: 800px;
 }
 
 .edit-imgs {
-    max-width: 80%;
+  max-width: 80%;
 }
 
 #id-header-images {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 #id-header-images img {
-    border-radius: 15px;
-    border: 10px solid #fff;
-    margin-top: 20px;
+  border-radius: 15px;
+  border: 10px solid #fff;
+  margin-top: 20px;
 }
 
 #id-header-images #img-1 {
-    margin-left: 70px;
-    justify-content: center;
-    display: flex;
+  margin-left: 70px;
+  justify-content: center;
+  display: flex;
 }
 
 #id-header-images #img-2 {
-    margin-left: -70px;
-    justify-content: center;
-    display: flex;
+  margin-left: -70px;
+  justify-content: center;
+  display: flex;
 }
 
 #id-header-images #img-3 {
-    margin-left: 70px;
+  margin-left: 70px;
 
-    justify-content: center;
-    display: flex;
+  justify-content: center;
+  display: flex;
 }
 
 #id-header-images #img-4 {
-    margin-left: -70px;
-    justify-content: center;
-    display: flex;
+  margin-left: -70px;
+  justify-content: center;
+  display: flex;
 }
 
 .mais-informacoes {
-    margin: 0px;
-    padding: 0px;
-    color: #fff;
-    background-color: #253d4a;
-    text-align: center;
-    font-family: "Poppins", Sans-serif;
-    font-size: 22px;
-    height: 100vh;
-    padding-top: 50px;
-    font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  color: #fff;
+  background-color: #253d4a;
+  text-align: center;
+  font-family: "Poppins", Sans-serif;
+  font-size: 22px;
+  height: 100vh;
+  padding-top: 50px;
+  font-weight: bold;
 }
 
 .accordion.accordion-3 {
-    border-radius: 3px;
+  border-radius: 3px;
 }
 
 .accordion.accordion-3 p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .accordion.accordion-3 .fa.fa-angle-down {
-    margin-top: -10px;
+  margin-top: -10px;
 }
 
 .accordion .animated-icon1 span {
-    background: #F44336;
+  background: #f44336;
 }
 
 .content {
-    text-align: center !important;
-    background-color: #304f61;
-    color: #fff;
+  text-align: center !important;
+  background-color: #304f61;
+  color: #fff;
 }
 
-.content p{
-    margin-top: 10px;
+.content p {
+  margin-top: 10px;
+  text-align: left;
 }
 
 .maisinfos {
-    text-align: center;
-    height: 100vh;
-    background-color: #253d4a;
+  text-align: center;
+  background-color: #253d4a;
 }
 
 .maisinfos button {
-    background-color: #253d4a;
-    font-size: 20px;
-    color: #fff;
-    text-align: center;
+  background-color: #253d4a;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
 }
 
 .maisinfos button:hover {
-    background-color: #3a5f74;
-    color: #fff;
+  background-color: #3a5f74;
+  color: #fff;
 }
 
 .insta-icon {
-    max-width: 32px;
-    filter: invert(1);
+  max-width: 32px;
+  filter: invert(1);
 }
 
-.insta-icon:hover{
-    max-width: 32px;
-    filter: invert(0);
+.insta-icon:hover {
+  max-width: 32px;
+  filter: invert(0);
 }
 
 .maisinfos-collapsible {
-    padding-top: 100px;
-    min-height: 780px;
+  min-height: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h3 {
-    font-size: 36px !important;
-    color: #fff !important;
-    padding-top: 50px;
+  font-size: 36px !important;
+  color: #fff !important;
+  padding-top: 50px;
+}
+
+.opcoes-pagamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #253d4a;
+}
+
+.opcoes-pagamento a {
+  margin-top: 20px;
+}
+
+h4 {
+  color: #fff !important;
+}
+
+.pergunta-investimento {
+  padding-top: 50px;
+}
+
+.valor-investimento {
+  padding-top: 0px !important;
+}
+
+.valor-investimento-cartao {
+  color: #fff !important;
+}
+
+.active .ph-caret-down {
+  display: none;
+}
+
+.collapsible .ph-caret-up {
+  display: none;
+}
+
+.active .ph-caret-up {
+  display: block !important;
+}
+
+.redirect-quero-meu-pack {
+  cursor: pointer;
+  color: #fff;
+}
+.content a {
+  cursor: pointer;
+  color: #fff;
 }

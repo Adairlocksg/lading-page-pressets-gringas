@@ -73,7 +73,6 @@
 }
 
 h1 {
-  color: #fff !important;
   font-size: 60px !important;
   font-family: "Fraunces", serif;
   font-weight: bold;
@@ -181,6 +180,7 @@ h1 {
 .maisinfos {
   text-align: center;
   background-color: #253d4a;
+  width: 100%;
 }
 
 .maisinfos button {
